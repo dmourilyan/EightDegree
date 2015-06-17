@@ -1,0 +1,268 @@
+
+/* GLOBAL
+------------------------------------------------------- */
+#eightdegree-popup {
+	width: 560px;
+	font: 12px/20px Arial, Helvetica, sans-serif;
+	overflow: hidden;
+}
+#eightdegree-popup * {
+	font: 12px/20px Arial, Helvetica, sans-serif;	
+}
+
+/* form side */
+#eightdegree-sc-form-wrap {
+	width: 550px;
+	float: left;
+}
+#eightdegree-sc-form-wrap #eightdegree-sc-form-head {
+	width: 520px;
+	padding: 15px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 1;
+	text-shadow: 0 -1px 0 #000;
+	background-color: #404040;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#393939)); 
+	background-image: -webkit-linear-gradient(top, #404040, #393939); 
+	background-image: -moz-linear-gradient(top, #404040, #393939); 
+	background-image: -ms-linear-gradient(top, #404040, #393939); 
+	background-image: -o-linear-gradient(top, #404040, #393939); 
+	background-image: linear-gradient(top, #404040, #393939);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#404040', EndColorStr='#393939');
+}
+#eightdegree-popup.no_preview #eightdegree-sc-form-wrap #eightdegree-sc-form-head {
+	width: 530px;
+}
+#eightdegree-sc-form-wrap #eightdegree-sc-form {
+	width: 490px;
+	padding: 15px;
+}
+#swatch_eightdegree_fromColor, #swatch_eightdegree_toColor{
+	width: 100%;
+	height: 50px;
+	background: #efefef;
+	border: 1px solid #efefef;
+	border-radius: 5px;
+}
+#swatch_eightdegree_toColor{background: #000;}
+#swatch_eightdegree_fromColor{background: #fff;}
+#eightdegree_toColor, #eightdegree_fromColor{
+	visibility: hidden;
+	position: absolute;
+}
+.swatch-row{
+	border: none !important;
+	margin-bottom: 20px !important
+}
+
+/* FORM
+------------------------------------------------------- */
+.help{
+	text-align: right;
+	color: #fff !important;
+}
+#eightdegree-sc-form-table {
+	width: 530px;
+}
+#eightdegree-sc-form-table tbody tr.form-row {
+	display: block;
+	padding: 5px 0;
+	border-bottom: solid 1px #eaeaea;
+}
+#eightdegree-sc-form-table tbody:last-child tr.form-row {
+	border-bottom: none;
+}
+#eightdegree-sc-form-table tbody tr.small-row{
+	border-bottom: none;
+	padding: 0;
+	margin-top: -25px;
+}
+#eightdegree-sc-form-table tbody tr.small-row-top{
+	border-bottom: none;
+	padding-top: 8px;
+	border-top: solid 1px #eaeaea;
+	margin-top: -3px;
+}
+#eightdegree-sc-form-table tbody tr.small-row-top .label{
+	font-weight: bold;
+}
+#eightdegree-sc-form-table tbody tr.small-row-top .eightdegree-form-desc{
+	margin-bottom: 10px;
+}
+#slider_eightdegree_end, #slider_eightdegree_start{
+	margin-top: 10px;
+}
+#eightdegree-sc-form-table tbody tr.form-row .label {
+	width: 130px;
+	text-align: left;
+	vertical-align: top;
+	line-height: 35px;
+	padding-right: 20px;
+}
+#eightdegree-sc-form-table tbody tr.form-row .field {
+	width: 370px;
+}
+#eightdegree-sc-form-table tbody tr.form-row .eightdegree-insert {
+	color: #fff;
+}
+
+/* child rows, sortable */
+#eightdegree-sc-form-table .has-child #form-child-add {
+	display: block;
+	width: 520px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 0;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+}
+#eightdegree-sc-form-table .has-child .child-clone-rows {
+	display: block;
+}
+#eightdegree-sc-form-table .has-child .child-clone-rows .child-clone-row {
+	padding: 8px 15px;
+	background: #f7f7f7;
+	border: solid 1px #e0e0e0;
+	margin-bottom: 10px;
+	cursor: move;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#eightdegree-sc-form-table .has-child .sortable-placeholder {
+	border: dashed 2px #e0e0e0;
+	margin-bottom: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #f7f7f7;
+	height: 40px;
+}
+#eightdegree-sc-form-table .has-child .child-clone-rows .child-clone-row .child-clone-row-form {
+	display: block;
+}
+#eightdegree-sc-form-table .has-child .child-clone-rows .child-clone-row .child-clone-row-form .child-clone-row-form-row {
+	display: block;
+	padding: 7px 0;
+	border-bottom: solid 1px #ddd;
+}
+#eightdegree-sc-form-table .has-child .child-clone-rows .child-clone-row .child-clone-row-form .child-clone-row-form-row .child-clone-row-label label {
+	display: block;
+	font-weight: bold;
+	font-style: italic;
+	padding-bottom: 7px;
+	line-height: 1;
+}
+#eightdegree-sc-form-table .has-child .child-clone-rows .child-clone-row .child-clone-row-remove {
+	color: #FF0000;
+	padding: 1px;
+}
+#eightdegree-sc-form-table .has-child .child-clone-rows .child-clone-row .child-clone-row-remove:hover {
+	color: #fff;
+	background: #FF0000;
+}
+
+/* form elements */
+
+/* - all */
+#eightdegree-sc-form-table tbody tr.form-row .eightdegree-form-text,
+#eightdegree-sc-form-table tbody tr.form-row .eightdegree-form-textarea,
+#eightdegree-sc-form-table tbody tr.form-row .eightdegree-form-select {
+	width: 370px;
+	padding: 5px 10px;
+	background: #f7f7f7;
+	border: none;
+	border-left: solid 1px #ddd;
+	border-top: solid 1px #ddd;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#eightdegree-sc-form-table tbody tr.form-row.has-child .eightdegree-form-text,
+#eightdegree-sc-form-table tbody tr.form-row.has-child .eightdegree-form-textarea,
+#eightdegree-sc-form-table tbody tr.form-row.has-child .eightdegree-form-select {
+	background: #fff;
+	width: 485px;
+}
+
+/* - textarea */
+#eightdegree-sc-form-table tbody tr.form-row .eightdegree-form-textarea {
+	height: 120px;
+}
+#eightdegree-sc-form-table tbody tr.form-row.has-child .eightdegree-form-textarea {
+	height: 100px;
+}
+
+/* - select */
+#eightdegree-sc-form-table tbody tr.form-row .eightdegree-form-select {
+	display: block;
+	height: 25px;
+}
+#eightdegree-sc-form-table tbody tr.form-row.has-child .eightdegree-form-select {
+	width: auto;
+	height: 25px;
+}
+
+/* - desc */
+#eightdegree-sc-form-table tbody tr.form-row .field .eightdegree-form-desc,
+#eightdegree-sc-form-table tbody tr.form-row .child-clone-row-desc {
+	display: block;
+	font-size:  12px;
+	color: #aaa;
+	font-style: italic;
+	padding-top: 3px;
+}
+
+/* Hide outline on focus */
+#content_eightdegree_button { outline: none; }
+
+
+.mce-i-eightdegree_button{
+	background-image:url(../images/icon.png)!important; 
+	background-repeat:no-repeat; 
+	background-color:transparent; 
+	background-position:center center
+}
+
+
+/*
+ * jQuery UI Slider 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+.ui-slider { position: relative; text-align: left; }
+.ui-slider .ui-slider-handle { position: absolute; z-index: 2;  cursor: default; }
+.ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
+
+.ui-slider-horizontal { height: .8em; }
+.ui-slider-horizontal .ui-slider-handle { top: -1px !important;}
+.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+.ui-slider-horizontal .ui-slider-range-min { left: 0; }
+.ui-slider-horizontal .ui-slider-range-max { right: 0; }
+
+
+/* Slider */
+.ui-slider{border:none;}
+.ui-slider .ui-slider-handle{width:10px;height:10px;border:1px solid #333; border-radius: 1px;}
+.ui-slider-horizontal .ui-slider-handle{margin-top:0; top:0;}
+.ui-slider-vertical .ui-slider-handle{margin-left:0;left:0;}
+
+
+
+
+
+/* Slider */
+.ui-slider{background:#d4d4d4;}
+.ui-slider .ui-slider-range{background:#4b8fae;}
+.ui-slider .ui-state-default{background-color:#404040;}
+.ui-slider .ui-state-active{background-color:#525252 !important;}
+.ui-slider .ui-state-focus{background-color:#000000;}
+.ui-slider .ui-state-hover{background-color:#525252;}
+
+
