@@ -372,7 +372,7 @@ if (!function_exists('EightDegree_get_special_excerpt')) {
 if(! class_exists( 'EightDegree_page_walker' )):
     class EightDegree_page_walker extends Walker_Nav_Menu{      
      
-        function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0){
+         function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0){
             global $wp_query;     
 
             $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
@@ -406,6 +406,7 @@ if(! class_exists( 'EightDegree_page_walker' )):
                     $class_names .= ' active-children';
                      
                 $class_names .= ' page-section'; 
+                $output .=  '<li class="'. $class_names .'">';
                 $link = get_permalink($ancestor[0]);
                                          
                 $varpost = get_post($item->object_id);
@@ -415,7 +416,7 @@ if(! class_exists( 'EightDegree_page_walker' )):
                 $attributes .= ' href="'. $link . $link_id . ' "';      
             
             }        
-            if( $do_page_section && !$item->menu_item_parent)
+            else if( $do_page_section && !$item->menu_item_parent)
             {
                 $class_names = ' class="'. esc_attr( $class_names ) . '"';
                 $output .=  '<li'. $class_names .'>';
@@ -618,3 +619,29 @@ function EightDegree_default_menu_cb(){
     );
     echo '</ul>';
 }
+
+function custom_admin() {
+
+global $user_level;
+
+if ($user_level != '10' ) {
+
+?>
+
+<style type="text/css">
+
+/*style here*/
+#menu-plugins,#mceu_43
+           {
+               display:none;
+           }
+
+</style>;
+
+<?php
+
+}
+
+}
+
+add_action('admin_head', 'custom_admin');
